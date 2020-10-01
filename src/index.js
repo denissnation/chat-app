@@ -10,7 +10,7 @@ const Filter = require('bad-words');
 const { generateMessage, generateLocationMessage } = require('./utils/message');
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./utils/users');
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const pathDirectory = path.join(__dirname, '../public');
 

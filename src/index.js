@@ -7,12 +7,12 @@ const server = http.createServer(app);
 const path = require('path');
 const io = socketio(server);
 const Filter = require('bad-words');
-const { generateMessage, generateLocationMessage } = require('./src/utils/message');
-const { addUser, removeUser, getUser, getUsersInRoom } = require('./src/utils/users');
+const { generateMessage, generateLocationMessage } = require('./utils/message');
+const { addUser, removeUser, getUser, getUsersInRoom } = require('./utils/users');
 
 const port = 3000;
 
-const pathDirectory = path.join(__dirname, './public');
+const pathDirectory = path.join(__dirname, '../public');
 
 app.use('/', express.static(pathDirectory));
 
